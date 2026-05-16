@@ -10,3 +10,7 @@ However it cannot add a single file TO a DocX or similar ZIP based file or folde
 
 Provided as a CMD file which can be edited to provide zip-it.exe in current folder.
 
+[ListArc](https://github.com/GitHubRulesOK/MyNotes/blob/master/C%23/listarc.cmd)
+---
+A related 7-Zip addin utility "ListArc" can be found at https://github.com/GitHubRulesOK/MyNotes/blob/master/C%23/listarc.cmd . This allows in many cases to see a listing inside standard Zip (or some other) self extracting archive files. Most easily used as a right click "SendTo" as simpler than launch a console command.
+![ListArc.png](https://github.com/GitHubRulesOK/MyNotes/blob/master/C%23/ListArc.png)
