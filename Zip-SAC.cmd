@@ -549,7 +549,7 @@ static void Rebuild(string target, string tempRoot, string stubPath)
         Console.WriteLine("\n Self Archiving Carrier (Stub.exe + zip = SAC.exe)\n");
         Console.WriteLine(" Usage: " + selfBase + " [options] [Module (must include .ext)] [args]\n");
         Console.WriteLine("  Options            Default is to call/run the file module");
-        Console.WriteLine("  -l [pattern]       List modules (can be any file type app's or doc's");
+        Console.WriteLine("  -l [pattern]       List modules (can be any file type app's or data/doc's)");
         Console.WriteLine("  -v [pattern]       Verbose list with source size and dates");
         Console.WriteLine("  -a file.ext        Add module(s) to archive (supports wildcards)");
         Console.WriteLine("  -d file.ext        Delete module(s) (supports wildcards)");
