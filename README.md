@@ -1,5 +1,15 @@
 # Zip-SAC
-A collection of Zip related utilities including Windows native code Self Archiving Containers
+A collection of ZIP‑related utilities, including Windows‑native Self‑Archiving Containers (SACs).  
+The concept itself is not new - it’s the continuation of a lineage that goes back more than 40 years. Early 1980's CP/M and early DOS: Developers sometimes shipped COM/EXE files with appended data, and the program unpacked itself. The more public "Grandfather Rights" could be ARC‑SEA (Self‑Extracting ARC). This produced .EXE files that: Contained the ARC archive, contained a tiny decompressor stub and ran on any DOS machine without needing ARC.EXE. Then later Phil Katz introduced PKSFX, a ZIP‑based self‑extracting EXE. This became the dominant SFX format from the 1990s.
+
+TAR‑SAC
+---
+Is conceptually closer but not identical to the ARC‑SEA model because: TAR is a Windows‑native helper, not embedded inside the stub. The SAC stub does not implement TAR itself, it carries the control logic that repeatedly invokes TAR to unpack or repack the payload.
+
+ZIP‑SAC  
+---
+Uses a model similar to the classic PKZIP/PKSFX self‑extracting executables. The SAC stub contains its own ZIP‑aware logic: it locates the appended ZIP payload, parses the local headers, unpacks modules, and can rebuild the archive. No external ZIP tool is required.  
+This makes ZIP‑SAC a true self‑extracting ZIP container in the PKSFX tradition, where the stub is the ZIP engine and the appended ZIP is a standard payload.
 
 [zip-it](https://github.com/GitHubRulesOK/Zip-SAC/blob/main/zip-it.cmd)
 ---
