@@ -8,7 +8,7 @@ if not exist "%CSC%" ( echo Compiler not found & pause & exit /b )
 for %%I in ("%CSC%") do set "CSCDIR=%%~dpI"
 set "PATH=%CSCDIR%;%PATH%"
 
-"%CSC%" /nologo /optimize /target:winexe /platform:x86 /out:"%~n0.exe" "%~0"
+"%CSC%" /nologo /optimize /platform:x86 /r:System.IO.Compression.dll /r:System.IO.Compression.FileSystem.dll /r:System.IO.Compression.ZipFile.dll /out:"%~n0.exe" "%~0"
 if errorlevel 1 ( echo Compilation failed & pause & exit /b 1 )
 
 if not exist "%~dpn0.exe" echo "%~dpn0" not found, possibly compile failed.
